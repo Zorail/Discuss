@@ -1,7 +1,7 @@
 {application,discuss,
              [{applications,[kernel,stdlib,elixir,logger,gettext,
                              phoenix_pubsub,cowboy,postgrex,phoenix,
-                             phoenix_html,phoenix_ecto]},
+                             phoenix_html,plug_cowboy,phoenix_ecto]},
               {description,"discuss"},
               {modules,['Elixir.Discuss','Elixir.Discuss.ChannelCase',
                         'Elixir.Discuss.ConnCase','Elixir.Discuss.Endpoint',
