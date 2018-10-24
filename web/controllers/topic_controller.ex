@@ -3,6 +3,8 @@ defmodule Discuss.TopicController do
 
   alias Discuss.Topic
 
+  plug Discuss.Plugs.RequireAuth when action in [:new, :edit, :update, :delete, :create]
+
   def new(conn, _params) do
     struct  = %Topic{}
     params = %{}
