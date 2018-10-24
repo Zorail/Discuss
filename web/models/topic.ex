@@ -4,6 +4,7 @@ defmodule Discuss.Topic do
   # to tell postgres what phoenix expects
   schema "topics" do
     field :title, :string
+    belongs_to :user, Discuss.Topic
   end
 
   def changeset(struct, params \\ %{}) do
