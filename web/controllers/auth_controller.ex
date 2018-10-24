@@ -33,4 +33,12 @@ defmodule Discuss.AuthController do
         {:ok, user}
     end
   end
+
+  def signout(conn, _params) do
+    IO.inspect("++++++")
+    IO.inspect(conn.assigns)
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: topic_path(conn, :index))
+  end
 end
